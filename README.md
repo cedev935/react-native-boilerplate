@@ -56,5 +56,38 @@ That's what worked for me with the latest versions of everything on MacOS
 If you have others issues about Android env take a look to this [here](https://facebook.github.io/react-native/docs/getting-started.html#android-development-environment).
 
 
+## Install React Navigation
 
+I would like to try new version of [React Navigation](https://reactnavigation.org/docs/en/next/getting-started.html).
 
+```
+npm install @react-navigation/native@next
+```
+
+```
+npm install react-native-reanimated react-native-gesture-handler react-native-screens react-native-safe-area-context @react-native-community/masked-view
+```
+
+and 
+
+```
+npm install @react-navigation/stack@next @react-native-community/masked-view
+```
+
+```
+npm install @react-navigation/bottom-tabs@next
+```
+
+Afte install all package from react-navigation you need to type this [from here](https://reactnavigation.org/docs/en/next/getting-started.html):
+
+```
+cd ios
+pod install
+cd ..
+```
+
+Install icons:
+
+```
+npm install --save react-native-vector-icons
+```
