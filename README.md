@@ -1,4 +1,4 @@
-# react-native-boilerplate
+# 🚀react-native-boilerplate 🚀
 My first app using React Native
 
 Let's start to create our standard template for React Native:
