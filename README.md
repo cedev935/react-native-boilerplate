@@ -91,3 +91,5 @@ Install icons:
 ```
 npm install --save react-native-vector-icons
 ```
+
+And configure it following [this steps](https://github.com/oblador/react-native-vector-icons#installation) 
