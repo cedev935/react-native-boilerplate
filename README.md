@@ -1,6 +1,10 @@
 # 🚀react-native-boilerplate 🚀
 My first app using React Native
 
+<img src="https://github.com/ziosa/react-native-boilerplate/blob/master/react-native-ios-gif.gif" width="180" height="340" /> <img src="https://github.com/ziosa/react-native-boilerplate/blob/master/react-native-android-gif.gif" width="180" height="340" />
+
+
+
 Let's start to create our standard template for React Native:
 
 ```
