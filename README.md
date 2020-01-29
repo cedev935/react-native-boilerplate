@@ -3,20 +3,28 @@ My first app using React Native
 
 Let's start to create our standard template for React Native:
 
-`npx react-native init ReactNativeBoilerplate`
+```
+npx react-native init ReactNativeBoilerplate
+```
 
 After that I run Metro Bundler with this command:
 
-`npm run start`
+```
+npm run start
+```
 
 
 And in another terminal or tab you can run the app for ios/android:
 
-`npm run ios`
+```
+npm run ios
+```
 
 or
 
-`npm run android`
+```
+npm run android
+```
 
 
 So for iOS everything worked on the first shot, but not for Android.
@@ -24,7 +32,7 @@ So for iOS everything worked on the first shot, but not for Android.
 
 First error:
 
-```
+```java
 * What went wrong:
 Could not compile settings file '/Users/szicar01/Repositories/react-native-boilerplate/android/settings.gradle'.
 > startup failed:
@@ -35,7 +43,7 @@ Could not compile settings file '/Users/szicar01/Repositories/react-native-boile
 
 Solution ([from here](https://github.com/facebook/react-native/issues/26625#issuecomment-560030421z)):
 
-```
+```java
 Go to android/gradle/wrapper/gradle-wrapper.properties
 
 Change the following line:
