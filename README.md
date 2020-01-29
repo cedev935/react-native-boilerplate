@@ -33,7 +33,7 @@ Could not compile settings file '/Users/szicar01/Repositories/react-native-boile
   java.lang.IllegalArgumentException: Unsupported class file major version 57
 ```
 
-Solution: (from here https://github.com/facebook/react-native/issues/26625#issuecomment-560030421z)
+Solution ([from here](https://github.com/facebook/react-native/issues/26625#issuecomment-560030421z)):
 
 ```
 Go to android/gradle/wrapper/gradle-wrapper.properties
@@ -44,6 +44,8 @@ Change the following line:
 + distributionUrl=https\://services.gradle.org/distributions/gradle-6.0.1-all.zip
 That's what worked for me with the latest versions of everything on MacOS
 ```
+
+If you have others issues about Android env take a look to this [here](https://facebook.github.io/react-native/docs/getting-started.html#android-development-environment).
 
 
 
