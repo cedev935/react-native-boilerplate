@@ -22,5 +22,29 @@ or
 So for iOS everything worked on the first shot, but not for Android.
 
 
+First error:
+
+```
+* What went wrong:
+Could not compile settings file '/Users/szicar01/Repositories/react-native-boilerplate/android/settings.gradle'.
+> startup failed:
+  General error during semantic analysis: Unsupported class file major version 57
+
+  java.lang.IllegalArgumentException: Unsupported class file major version 57
+```
+
+Solution: (from here https://github.com/facebook/react-native/issues/26625#issuecomment-560030421z)
+
+```
+Go to android/gradle/wrapper/gradle-wrapper.properties
+
+Change the following line:
+
+- distributionUrl=https\://services.gradle.org/distributions/gradle-5.5-all.zip
++ distributionUrl=https\://services.gradle.org/distributions/gradle-6.0.1-all.zip
+That's what worked for me with the latest versions of everything on MacOS
+```
+
+
 
 
