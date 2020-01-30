@@ -1,11 +1,42 @@
 import * as React from 'react';
 import {Text, View, Button, StyleSheet} from 'react-native';
 import {createStackNavigator} from '@react-navigation/stack';
+import ImagePicker from 'react-native-image-picker';
+import {Thumbnail} from 'native-base';
 
 function DetailsScreen() {
+  const [image, setImage] = React.useState();
+  const selectPhotoTapped = () => {
+    const options = {
+      quality: 1.0,
+      maxWidth: 500,
+      maxHeight: 500,
+      storageOptions: {
+        skipBackup: true,
+      },
+    };
+
+    ImagePicker.showImagePicker(options, response => {
+      console.log('Response = ', response);
+
+      if (response.didCancel) {
+        console.log('User cancelled photo picker');
+      } else if (response.error) {
+        console.log('ImagePicker Error: ', response.error);
+      } else if (response.customButton) {
+        console.log('User tapped custom button: ', response.customButton);
+      } else {
+        let source = {uri: response.uri};
+        setImage(source)
+      }
+    });
+  };
+
   return (
     <View style={styles.view}>
       <Text>Details!</Text>
+      <Thumbnail square large source={image} />
+      <Button title="Go " onPress={selectPhotoTapped} />
     </View>
   );
 }
