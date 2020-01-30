@@ -1,18 +1,34 @@
 import * as React from 'react';
-import {Text, View, StyleSheet} from 'react-native';
+import {
+  Container,
+  Header,
+  Title,
+  Content,
+  Button,
+  Left,
+  Right,
+  Body,
+  Icon,
+  Text,
+} from 'native-base';
 
 export default function SettingsScreen() {
   return (
-    <View style={styles.view}>
-      <Text>Settings!</Text>
-    </View>
+    <Container>
+      <Header>
+        <Left>
+          <Button transparent>
+            <Icon name="menu" />
+          </Button>
+        </Left>
+        <Body>
+          <Title>Header</Title>
+        </Body>
+        <Right />
+      </Header>
+      <Content>
+        <Text>This is Content Section</Text>
+      </Content>
+    </Container>
   );
 }
-
-const styles = StyleSheet.create({
-  view: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-  },
-});
